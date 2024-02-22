@@ -4,9 +4,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "webpack serve --mode development --open",
-    "dev": "nodemon src/app.js",     
-    "build": "webpack --mode production"   
+    "start": "node src/app.js -m PROD",
+    "dev": "nodemon src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -23,9 +22,8 @@
     "express": "^4.18.2",
     "express-compression": "^1.0.2",
     "express-handlebars": "^7.0.7",
-    "express-react-views": "^0.11.0",
     "express-session": "^1.17.3",
-    "jsonwebtoken": "^9.0.2",
+    "jsonwebtoken": "^9.0.0",
     "mercadopago": "^2.0.6",
     "method-override": "^3.0.0",
     "mongoose": "^7.1.0",
@@ -41,8 +39,6 @@
     "passport-jwt": "^4.0.1",
     "passport-local": "^1.0.0",
     "puppeteer": "^20.9.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "session-file-store": "^1.5.0",
     "socket.io": "^4.6.1",
     "swagger-jsdoc": "^6.2.8",
@@ -53,9 +49,9 @@
     "@faker-js/faker": "^8.0.2",
     "chai": "^4.3.7",
     "handlebars": "^4.5.0",
-  
-    "nodemon": "^3.0.1"
-    
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
   },
   "description": ""
 }
