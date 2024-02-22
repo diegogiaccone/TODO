@@ -1,0 +1,57 @@
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12 shadow-lg p-3 mb-5">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white">Cambiar contraseña</div>
+                <div class="card-body text-primary">
+                    <form action="/recoverypass/:{{token}}" method="post">                    
+                      <div class="mb-3">                        
+                        <input type="hidden" name="user" value="{{user}}">
+                    </div>                    
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña Nueva</label>
+                        <input type="password" id="newpass" name="newpass" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Repetir Contraseña</label>
+                        <input type="password" id="newpass2" name="newpass2" class="form-control">
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-primary">
+                    <a href="/" type="button" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                </div>                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-transparent text-dark pt-5 pb-4"> 
+        <hr class="mb-4">
+        <div class="text-center mb-2">
+          <p class="text-light">Copyright Todos los derechos Reservados ® 
+            <a href="#">
+              <strong class="text-primary"></strong>
+            </a>
+          </p>
+        </div>
+        <div class="text-center">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/" target="_blank" class="text-light"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/" target="_blank" class="text-light"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/" target="_blank" class="text-light"><i class="fab fa-instagram"></i></a>
+            </li>            
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/watch?v=RCnxTwMZLes&t=332s" target="_blank" class="text-light"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</footer>

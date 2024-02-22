@@ -1,0 +1,112 @@
+<body>
+  <header class="container-fluid bg-dark position-sticky top-0">
+    <div class="navbar-nav">
+      <div class="header2">
+        <div class="title">
+          <img class="avatar" src="https://i.postimg.cc/65D2wVCC/imagen.png" alt="">
+        <h1>FUNKOPOPS</h1>     
+        <button type="submit" class="btn btn-outline-success button cart productall"><a class="page-link" href="/api/products_index">Todos los Productos</a></button>        
+        <a href="/" class="btn btn-outline-primary cart productall" style="margin-left: 10px;">Inicio</a>       
+        <a href="/api/addProduct" class="btn btn-orange button cart productall">Agregar Productos</a>        
+        </div>  
+        <div class="navbartotal">
+        <div >
+          <h4 class="card-title pt-2 text-center text-primary">Bienvenido:({{name}})</h4>
+        </div>
+        <div>
+          <h4 class="card-title pt-2 text-center text-success">Rol:({{rol}})</h4>         
+        </div>
+        <div class="btn-group">
+      <img src={{avatar}} class="btn dropdown-toggle avatar" data-bs-toggle="dropdown" aria-expanded="false" />
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/updateavatar">Cambiar Avatar</a></li>
+    {{#if pass}}
+    <li><a class="dropdown-item" href="/updatepass">Cambiar Contraseña</a></li>
+    {{/if}}
+    <li><a class="dropdown-item" href="/api/users">Todos los usuarios</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a href="/logout" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>    
+  </ul>
+    </div>
+  </header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 shadow-lg p-3 mb-5">
+            <div class="card border-primary">
+                <div class="card-header bg-primary text-white text-center">Asignación de rol de usuarios</div>
+                <div class="card-body text-primary">
+                    <form action="/rol" method="post">                     
+                    <div class="mb-3">
+                        <label for="user" class="form-label">Email del usuario</label>
+                        <input type="email" id="user" name="user" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <div class="container5 text-center">
+                            <label for="rol" class="form-label">Elige el Rol</label> 
+                            <select id="rol" name="rol">
+                            <option value="65d68513f1c06a9f11587c17">Usuario</option>
+                            <option value="65d68513f1c06a9f11587c18">Premium</option>
+                            <option value="65d68513f1c06a9f11587c19">Admin</option> 
+                            </select>
+                        </div>                          
+                    </div>
+                    <div class="card-footer bg-transparent border-primary text-center">
+                    <a href="/" type="button" class="btn btn-secondary">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Asignar Rol</button>
+                    </div>                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 shadow-lg p-3 mb-5">
+            <div class="card border-primary">
+                <div class="card-header bg-danger text-white text-center">Eliminar Usuario</div>
+                <div class="card-body text-primary">
+                    <form action="/api/users/delete/user?_method=DELETE" method="post">                     
+                    <div class="mb-3">
+                        <label for="user" class="form-label">Email del usuario</label>
+                        <input type="email" id="user" name="user" class="form-control">
+                    </div>                   
+                    <div class="card-footer bg-transparent border-primary text-center">                    
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </div>                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-transparent text-dark pt-5 pb-4"> 
+        <hr class="mb-4">
+        <div class="text-center mb-2">
+          <p class="text-light">Copyright Todos los derechos Reservados ® 
+            <a href="#">
+              <strong class="text-primary"></strong>
+            </a>
+          </p>
+        </div>
+        <div class="text-center">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/" target="_blank" class="text-light"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/" target="_blank" class="text-light"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/" target="_blank" class="text-light"><i class="fab fa-instagram"></i></a>
+            </li>            
+            <li class="list-inline-item">
+              <a href="https://www.youtube.com/watch?v=RCnxTwMZLes&t=332s" target="_blank" class="text-light"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</footer>
